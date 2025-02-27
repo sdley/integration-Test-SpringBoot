@@ -100,7 +100,6 @@ class UserServiceImplTest {
 
     @Test
     void updateUser() {
-        //doNothing().when(userRepository).save(user);
 
         // test de la creation cote repository
         when(userRepository.save(user)).thenReturn(user);

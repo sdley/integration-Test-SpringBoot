@@ -32,12 +32,12 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
-    public User getUserById(@RequestParam Long id){
+    public User getUserById(@PathVariable Long id){
         return userService.getUserById(id).orElse(null);
     }
 
     @DeleteMapping("/users/{id}")
-    public void deleteUser(@RequestParam Long id){
+    public void deleteUser(@PathVariable Long id){
         userService.deleteUser(id);
     }
 
